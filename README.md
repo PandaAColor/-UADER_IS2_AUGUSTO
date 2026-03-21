@@ -14,7 +14,7 @@
 
 ### Título3
 
-! [instagram logo](/img/pngwing.com.png)
+![instagram logo](/img/pngwing.com.png)
 
 [instagram](https://www.instagram.com/)
 
