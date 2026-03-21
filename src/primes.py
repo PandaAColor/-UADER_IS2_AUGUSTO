@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 # Python program to display all the prime numbers within an interval
-
+#comentario1
 lower = 1
 upper = 500
 
-print("Prime numbers between", lower, "and", upper, "are:")
+print("Prime numbers between", lower, "and", upper, "are:") #comentario2
 
 for num in range(lower, upper + 1):
    # all prime numbers are greater than 1
@@ -13,4 +13,4 @@ for num in range(lower, upper + 1):
            if (num % i) == 0:
                break
        else:
-           print(num)
+           print(num) #comentario 3
