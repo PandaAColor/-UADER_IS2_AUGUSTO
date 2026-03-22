@@ -20,10 +20,17 @@ def factorial(num):
             num -= 1
         return fact 
 
-if len(sys.argv) == 1:
-   print("Introduzca un número")
-   num=int(input('numero'))
+if len(sys.argv) < 3:
+   min=int(input('Introduzca número menor: '))
+   max=int(input('Introduzca número mayor: '))
 else:
-    num=int(sys.argv[1])
-print("Factorial ",num,"! es ", factorial(num)) 
+    min=int(sys.argv[1])
+    max=int(sys.argv[2])
 
+if min >max:
+    a = max
+    max = min
+    min = a
+
+for i in range(min, max+1):
+    print("Factorial ",i,"! es ", factorial(i))
