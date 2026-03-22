@@ -20,12 +20,24 @@ def factorial(num):
             num -= 1
         return fact 
 
-if len(sys.argv) < 3:
-   min=int(input('Introduzca número menor: '))
-   max=int(input('Introduzca número mayor: '))
+if len(sys.argv) < 2:
+   rango=input('Introduzca el rango')
+   
 else:
-    min=int(sys.argv[1])
-    max=int(sys.argv[2])
+    rango=sys.argv[1]
+    
+if rango.startswith('-'):
+    min =1
+    max = int(rango.replace('-', ''))
+
+elif rango.endswith('-'):
+    min = int(rango.replace('-', ''))
+    max = 60
+
+else:
+    rango_lista = rango.split('-')
+    min = int(rango_lista[0])
+    max = int(rango_lista[1])
 
 if min >max:
     a = max
@@ -34,3 +46,4 @@ if min >max:
 
 for i in range(min, max+1):
     print("Factorial ",i,"! es ", factorial(i))
+
